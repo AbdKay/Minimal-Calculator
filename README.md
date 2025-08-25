@@ -60,7 +60,7 @@ calculator/
 
 ## 🌐 Live Demo
 
-[👉 View Live Demo](#) _(replace with your GitHub Pages link once deployed)_
+[👉 View Live Demo](#) _(https://abdkay.github.io/Minimal-Calculator/)_
 
 ---
 
