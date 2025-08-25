@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimal Calculator</title>
+
+    <!-- Font Awesome (no integrity attr to avoid SRI hash issues) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="calculator" role="application" aria-label="Calculator">
+      <header class="topbar">
+        <h1 class="brand"><i class="fa-solid fa-calculator"></i> Calculator</h1>
+        <div class="actions">
+          <button
+            class="btn icon"
+            id="themeToggle"
+            title="Toggle theme"
+            aria-label="Toggle theme"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button
+            class="btn icon"
+            id="copy"
+            title="Copy result"
+            aria-label="Copy result"
+          >
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="display-wrap">
+        <input
+          id="display"
+          class="display"
+          type="text"
+          inputmode="decimal"
+          autocomplete="off"
+          aria-label="Calculator display"
+          readonly
+        />
+      </section>
+
+      <section class="keys" aria-label="Calculator keys">
+        <!-- Row 1 -->
+        <button class="btn function" data-action="clear" aria-label="Clear">
+          <i class="fa-solid fa-c"></i>
+        </button>
+        <button
+          class="btn function"
+          data-action="sign"
+          aria-label="Toggle sign"
+        >
+          ±
+        </button>
+        <button class="btn function" data-action="percent" aria-label="Percent">
+          %
+        </button>
+        <button class="btn operator" data-key="/" aria-label="Divide">÷</button>
+
+        <!-- Row 2 -->
+        <button class="btn" data-key="7">7</button>
+        <button class="btn" data-key="8">8</button>
+        <button class="btn" data-key="9">9</button>
+        <button class="btn operator" data-key="*" aria-label="Multiply">
+          ×
+        </button>
+
+        <!-- Row 3 -->
+        <button class="btn" data-key="4">4</button>
+        <button class="btn" data-key="5">5</button>
+        <button class="btn" data-key="6">6</button>
+        <button class="btn operator" data-key="-" aria-label="Subtract">
+          −
+        </button>
+
+        <!-- Row 4 -->
+        <button class="btn" data-key="1">1</button>
+        <button class="btn" data-key="2">2</button>
+        <button class="btn" data-key="3">3</button>
+        <button class="btn operator" data-key="+" aria-label="Add">+</button>
+
+        <!-- Row 5 -->
+        <button class="btn" data-key="0" data-wide>0</button>
+        <button class="btn" data-key="." aria-label="Decimal">.</button>
+        <button class="btn equals" data-action="equals" aria-label="Equals">
+          =
+        </button>
+      </section>
+
+      <footer class="bottombar">
+        <button
+          class="btn icon danger"
+          id="backspace"
+          title="Delete"
+          aria-label="Delete one"
+        >
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+        <span class="hint"
+          >Keyboard: 0–9 . + − × ÷, Enter (=), Backspace (⌫), C (clear)</span
+        >
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
